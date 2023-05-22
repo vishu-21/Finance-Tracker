@@ -1,0 +1,27 @@
+import React from 'react'
+import { Balance } from "./components/Balance";
+import { IncomeExpenses } from "./components/IncomeExpenses";
+import { TransactionList } from "./components/TransactionList";
+import { AddTransaction } from "./components/AddTransaction";
+
+import { GlobalProvider } from "./context/GlobalState";
+
+const Homepage = () => {
+  return (
+    <GlobalProvider>
+      <h2>Personal Finance Tracker</h2>
+      <div className="container">
+        <div className="left">
+          <Balance />
+          <IncomeExpenses />
+          <AddTransaction />
+        </div>
+        <div className="right">
+          <TransactionList />
+        </div>
+      </div>
+    </GlobalProvider>
+  )
+}
+
+export default Homepage
