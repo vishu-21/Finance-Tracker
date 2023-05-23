@@ -20,7 +20,7 @@ export const GlobalProvider = ({ children }) => {
   // Actions
   async function getTransactions() {
     try {
-      const res = await axios.get("/api/v1/transactions");
+      const res = await axios.get("https://be-009l.onrender.com/api/v1/transactions");
 
       dispatch({
         type: "GET_TRANSACTIONS",
@@ -36,7 +36,7 @@ export const GlobalProvider = ({ children }) => {
 
   async function deleteTransaction(id) {
     try {
-      await axios.delete(`/api/v1/transactions/${id}`);
+      await axios.delete(`https://be-009l.onrender.com/api/v1/transactions/${id}`);
 
       dispatch({
         type: "DELETE_TRANSACTION",
